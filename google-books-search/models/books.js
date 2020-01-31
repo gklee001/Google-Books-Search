@@ -1,12 +1,14 @@
 //creating book schema
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-var Schema = mongoose.Schema;
-
-var booksSchema = new Schema({
+const booksSchema = new Schema({
     ///adding fields
-    title: String,
-    author: String,
+    title: { type: String, required: true },
+    author: { type: String, required: true },
+    description: { type: String, required: true },
+    image: { type: String, required: true },
+    link: { type: String, required: true }
 
 
 })
